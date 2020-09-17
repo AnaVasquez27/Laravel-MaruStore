@@ -13,7 +13,18 @@ class Productos extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('productos', function (Blueprint $table) {
+            $table->id();
+            $table->bigInteger('id_prendas')->unsigned();
+            $table->bigInteger('id_color')->unsigned();
+            $table->bigInteger('precio');
+            $table->integer('existencias');
+
+            $table->foreign('id_prendas')->references('id')->on('tipo_prendas');
+            $table->foreign('id_color')->references('id')->on('colores');
+
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +34,6 @@ class Productos extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('colores');
     }
 }

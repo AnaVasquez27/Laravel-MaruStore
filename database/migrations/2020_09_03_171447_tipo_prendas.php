@@ -18,6 +18,26 @@ class TipoPrendas extends Migration
             $table->string('nombre');
             $table->timestamps();
         });
+
+        DB::table('tipo_prendas')->insert([
+            'nombre' => 'Blusas',
+        ]);
+        DB::table('tipo_prendas')->insert([
+            'nombre' => 'jeans',
+        ]);
+        DB::table('tipo_prendas')->insert([
+            'nombre' => 'Camisas',
+        ]);
+        DB::table('tipo_prendas')->insert([
+            'nombre' => 'Vestidos',
+        ]);
+        DB::table('tipo_prendas')->insert([
+            'nombre' => 'Shorts',
+        ]);
+        DB::table('tipo_prendas')->insert([
+            'nombre' => 'Capris',
+        ]);
+
     }
 
     /**

@@ -18,6 +18,25 @@ class TallasNumeros extends Migration
             $table->string('numeros');
             $table->timestamps();
         });
+
+        DB::table('tallas_numeros')->insert([
+            'numeros' => '4',
+        ]);
+        DB::table('tallas_numeros')->insert([
+            'numeros' => '6',
+        ]);
+        DB::table('tallas_numeros')->insert([
+            'numeros' => '8',
+        ]);
+        DB::table('tallas_numeros')->insert([
+            'numeros' => '10',
+        ]);
+        DB::table('tallas_numeros')->insert([
+            'numeros' => '12',
+        ]);
+        DB::table('tallas_numeros')->insert([
+            'numeros' => '14',
+        ]);
     }
 
     /**

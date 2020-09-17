@@ -18,6 +18,19 @@ class TallasLetras extends Migration
             $table->string('letras');
             $table->timestamps();
         });
+
+        DB::table('tallas_letras')->insert([
+            'letras' => 'S',
+        ]);
+        DB::table('tallas_letras')->insert([
+            'letras' => 'M',
+        ]);
+        DB::table('tallas_letras')->insert([
+            'letras' => 'L',
+        ]);
+        DB::table('tallas_letras')->insert([
+            'letras' => 'XL',
+        ]);
     }
 
     /**

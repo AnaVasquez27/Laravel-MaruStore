@@ -13,7 +13,17 @@ class Vendidos extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('vendidos', function (Blueprint $table) {
+            $table->bigInteger('id_factura')->unsigned();
+            $table->bigInteger('id_producto')->unsigned();
+
+            $table->foreign('id_factura')->references('id')->on('facturacion');
+            $table->foreign('id_producto')->references('id')->on('productos');
+
+            $table->primary(['id_factura','id_producto']);
+
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +33,6 @@ class Vendidos extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('vendidos');
     }
 }

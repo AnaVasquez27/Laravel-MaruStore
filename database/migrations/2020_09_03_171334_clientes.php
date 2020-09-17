@@ -17,7 +17,7 @@ class Clientes extends Migration
             $table->id();
             $table->string('nombres');
             $table->string('apellidos');
-            $table->integer('telefono');
+            $table->biginteger('telefono');
             $table->string('email');
             $table->string('direccion');
             $table->timestamps();

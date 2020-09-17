@@ -26,5 +26,14 @@
         </li>
         @endcanany
 
+       
+        <li class="nav-item">
+            <a class="nav-link {{(request()->segment(1)=='clientes') ? 'active':'' }}" href="{{ route('clientes.index') }}">
+                <i class="ni ni-single-02 text-orange"></i>
+                <span class="nav-link-text">Clientes</span>
+            </a>
+        </li>
+        
+
     </ul>
 </div>
