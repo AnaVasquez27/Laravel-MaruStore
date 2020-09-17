@@ -17,3 +17,7 @@ Route::resource('roles', 'RolesController');
 Route::get('dataTableRoles', 'RolesController@dataTable')->name('dataTableRoles');
 
 Route::resource('clientes', 'clientesController');
+Route::get('dataTableclientes', 'clientesController@dataTable')->name('dataTableclientes');
+
+
+Route::resource('facturacion', 'facturacionController');

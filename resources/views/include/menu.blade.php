@@ -33,6 +33,13 @@
                 <span class="nav-link-text">Clientes</span>
             </a>
         </li>
+
+        <li class="nav-item">
+            <a class="nav-link {{(request()->segment(1)=='facturacion') ? 'active':'' }}" href="{{ route('facturacion.index') }}">
+                <i class="ni ni-paper-diploma text-orange"></i>
+                <span class="nav-link-text">Facturacion</span>
+            </a>
+        </li>
         
 
     </ul>
